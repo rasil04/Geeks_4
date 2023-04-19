@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Phone Detail</title>
+    <link rel="shortcut icon" href="https://img.hhcdn.ru/employer-logo/5832362.png">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<center>
+{% include 'header.html' %}
   <h2>{{phone_id.title}}</h2>
     <p>{{phone_id.description}}</p>
   <img src="{{phone_id.image.url}}" alt="">
@@ -15,5 +18,6 @@
   </iframe>
   <p>{{phone_id.created_date}}</p>
 </center>
+{% include 'footer.html' %}
 </body>
 </html>

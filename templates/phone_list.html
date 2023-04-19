@@ -1,18 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Phone List</title>
+    <link rel="shortcut icon" href="https://img.hhcdn.ru/employer-logo/5832362.png">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+{% include 'header.html' %}
 <ol>
     {% for i in phone_list %}
         <li>
             <h1>{{i.title}}</h1>
+            <center>
             <img src="{{i.image.url}}" alt="" width="200" height="200">
+            </center>
             <a href="/phone_list/{{i.id}}">Подробнее</a>
         </li>
     {% endfor %}
 </ol>
+{% include 'footer.html' %}
 </body>
 </html>
