@@ -16,5 +16,9 @@ class Phones(models.Model):
     model_phone = models.CharField("Модель телефона", max_length=100, choices=MODEL_PHONE)
     created_date = models.DateTimeField(auto_now_add=True)
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Телефон'
+        verbose_name_plural = 'Телефоны'

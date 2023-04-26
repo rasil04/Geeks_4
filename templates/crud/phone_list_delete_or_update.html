@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete/Update</title>
+</head>
+<body>
+<h1><a href="/phone_list/">На главную</a></h1>
+<center>
+<h2>Выберите телефон для удаления или обновления</h2>
+<ul>
+    {% for i in phone_lst_delete %}
+        <li>
+            <h1>{{i.title}}</h1>
+            <button><a href="/phone_delete_list/{{i.id}}">Удалить</a></button>
+            <button><a href="/phone_update_list/{{i.id}}/update">Редактировать</a></button>
+        </li>
+    {% endfor %}
+</ul>
+</center>
+<style>
+body {
+   background: #e6f4fd;
+   font-family: 'Roboto', sans-serif;
+}
+</style>
+</body>
+</html>
