@@ -9,14 +9,15 @@
 </head>
 <body>
 {% include 'header.html' %}
-  <h2>{{phone_id.title}}</h2>
-    <p>{{phone_id.description}}</p>
-  <img src="{{phone_id.image.url}}" alt="">
-  <p>{{phone_id.model_phone}}</p>
-  <p>{{phone_id.cost}}</p>
-  <iframe src="{{phone_id.video}}" frameborder="0">
+<center>
+  <h2>{{object.title}}</h2>
+    <p>{{object.description}}</p>
+  <img src="{{object.image.url}}" alt="">
+  <p>{{object.model_phone}}</p>
+  <p>{{object.cost}}</p>
+  <iframe src="{{object.video}}" frameborder="0">
   </iframe>
-  <p>{{phone_id.created_date}}</p>
+  <p>{{object.created_date}}</p>
 </center>
 {% include 'footer.html' %}
 </body>

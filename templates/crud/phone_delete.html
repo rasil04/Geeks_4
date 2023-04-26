@@ -8,9 +8,13 @@
 <center>
 Вы действительно хотите удалить этот телефон?
 <h3>{{phone_id_delete.title}}</h3>
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <button type="submit">Да</button>
+    <button><a href="/phone_delete_or_update_list/"> Нет</a></button>
+</form>
 
-    <button><a href="/phone_delete_list/{{phone_id_delete.id}}/delete/">Да</a></button>
-    <button><a href="/phone_delete_list/"> Нет</a></button>
+
 </center>
 </body>
 <style>

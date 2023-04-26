@@ -10,8 +10,8 @@
 </head>
 <body>
 {% include 'header.html' %}
+{% for i in object_list %}
 <ol>
-    {% for i in phone_list %}
         <li>
             <h1>{{i.title}}</h1>
             <center>

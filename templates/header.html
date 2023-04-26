@@ -17,7 +17,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/book/">Книги</a></li>
-            <li><a class="dropdown-item" href="/phone_list/">Телефоны</a></li>
+            <li><a class="dropdown-item" href="/">Телефоны</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Хз что писать, пригодится</a></li>
           </ul>
@@ -28,12 +28,12 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/add-phone/">Добавить телефон</a></li>
-            <li><a class="dropdown-item" href="/phone_delete_list/">Удалить/Изменить телефон</a></li>
+            <li><a class="dropdown-item" href="/phone_delete_or_update_list/">Удалить/Изменить телефон</a></li>
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <form action="{% url 'search' %}" method="GET" class="d-flex" role="search">
+        <input class="form-control me-2" type="search" type="text" name="q" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
