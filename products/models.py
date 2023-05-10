@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Customer(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Фамилие')
+    name = models.CharField(max_length=100, verbose_name='Фамилия')
     last_name = models.CharField(max_length=100, verbose_name='Имя', blank=True)
     phone = models.CharField(max_length=100, verbose_name='Номер телефона')
     email = models.EmailField(verbose_name='Почта', blank=True)
@@ -36,8 +36,8 @@ class Product(models.Model):
 class Order(models.Model):
     STATUS = (
         ('На обработке', 'На обработке'),
-        ('Выехал', 'Выехал'),
-        ('Доставлен', 'Доставлен')
+        ('В пути', 'В пути'),
+        ('Прибыл', 'Прибыл')
     )
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
