@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <h2><a href="/add_order/" class="geeks">Добавить ордер</a></h2>
+    <h1><a href="/product_jacket/" class="btn btn-primary">Тег Жаккеты</a></h1>
+    <h1><a href="/product_boots/" class="btn btn-primary">Тег Бутсы</a></h1>
+    <h1><a href="/product_shirt/" class="btn btn-primary">Тег Футболки</a></h1>
+    <h1><a href="/product_cap/" class="btn btn-primary">Тег Кепки</a></h1>
+</head>
+<body>
+<div>
+    <ul>
+        {% for i in object_list %}
+        <li>
+            <h2>{{i.name}}</h2>
+            <a href="/product_list/{{i.id}}">Детально</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+
+<style>
+    h1 {
+        color: red;
+    }
+
+    h3 {
+        color: blue;
+    }
+
+    body {
+        background-color: cyan;
+        color: brown;
+        font-family: "Arial";
+        text-align: center;
+    }
+
+    .geeks {
+        color: red;
+        font-family: "Tw Cen MT Condensed Extra Bold";
+    }
+</style>

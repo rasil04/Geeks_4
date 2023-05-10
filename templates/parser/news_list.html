@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News List</title>
+</head>
+<body>
+<center>
+    <ol>
+        {% for i in object_list %}
+        <li>
+            <h1>{{i.title_name}}</h1>
+            <img src="{{i.image}}" alt="" width="400" height="300">
+            <button><a href="{{i.title_url}}">Перейти к новостям</a></button>
+        </li>
+        <hr>
+        {% endfor %}
+    </ol>
+
+</center>
+
+</body>
+</html>
+
+<style>
+
+    hr {
+        border: none; /* Убираем границу для браузера Firefox */
+        color: red; /* Цвет линии для остальных браузеров */
+        background-color: red; /* Цвет линии для браузера Firefox и Opera */
+        height: 10px; /* Толщина линии */
+    }
+
+</style>
